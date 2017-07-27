@@ -3,7 +3,10 @@
 After you clone this repository and run "npm install"
 To start the project
 Open two terminals, One to start the front end, One to start the backend
+
 ~ npm start
+
+
 ~ nodemon server.js
 
 Front end will run on `http://localhost:4200/`
