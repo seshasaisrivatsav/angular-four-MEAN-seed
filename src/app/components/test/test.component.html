@@ -1,0 +1,59 @@
+
+<div class="container">
+
+  <h1>Test</h1>
+
+  <div *ngIf="alertMessage"
+       class="alert alert-danger">
+    "Failed to create"
+  </div>
+
+  <div *ngIf="successMessage"
+       class="alert alert-success">
+    "Succesfully created/deleted"
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Test Message</th>
+      <th>&nbsp;</th>
+    </tr>
+
+
+    <tr>
+      <td>
+        <input [(ngModel)]="message"
+               placeholder="message"
+               class="form-control"/>
+      </td>
+
+
+      <td>
+        <button (click)="createMessage()"
+                class="btn btn-primary pull-right">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
+      </td>
+    </tr>
+    </thead>
+
+
+    <tbody>
+    <tr *ngFor="let message of messages">
+      <td>
+        {{message.message}}
+      </td>
+      <td>
+        <button (click)="deleteMessage(message._id)"
+                class="btn btn-danger pull-right">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

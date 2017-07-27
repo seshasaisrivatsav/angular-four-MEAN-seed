@@ -1,5 +1,9 @@
 module.exports = function(app)
 {
+
+    app.get('/api', (req, res) => {
+      res.send('App works');
+    });
     app.get("/api/test", findAllMessages);
     app.post("/api/test", createMessage);
     app.delete("/api/test/:id", deleteMessage);
@@ -24,6 +28,7 @@ module.exports = function(app)
     var TestModel = mongoose.model("TestModel", TestSchema);
 
     function findAllMessages(req, res) {
+
         TestModel
             .find()
             .then(
@@ -37,6 +42,7 @@ module.exports = function(app)
     }
 
     function createMessage(req, res) {
+        console.log("in app");
         TestModel
             .create(req.body)
             .then(
