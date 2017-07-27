@@ -1,5 +1,3 @@
-
-
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import 'rxjs/Rx';
@@ -9,13 +7,14 @@ import {environment} from '../../environments/environment';
 export class TestService {
 
 
+  baseUrl = environment.baseUrl;
 
   constructor(private _http: Http) {
   }
 
   findAllMessages() {
     console.log('here');
-    return this._http.get('http://localhost:3100/api/test')
+    return this._http.get(this.baseUrl + '/api/test')
       .map(
         (res: Response) => {
           const data = res.json();
@@ -28,7 +27,7 @@ export class TestService {
     const obj = {
       message: message
     };
-    return this._http.post('http://localhost:3100/api/test', obj)
+    return this._http.post(this.baseUrl + '/api/test', obj)
       .map(
         (res: Response) => {
           const data = res.json();
@@ -36,8 +35,8 @@ export class TestService {
         }
       );
   }
-  deleteMessage(messageId){
-    return this._http.delete('http://localhost:3100/api/test/' + messageId)
+  deleteMessage(messageId) {
+    return this._http.delete(this.baseUrl + '/api/test' + messageId)
       .map(
         (res: Response) => {
           const data = res.json();
