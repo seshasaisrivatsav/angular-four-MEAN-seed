@@ -1,6 +1,19 @@
 # AngularFourMEANSeed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+After you clone this repository and run "npm install"
+To start the project
+Open two terminals, One to start the front end, One to start the backend
+~ npm start
+~ nodemon server.js
+
+Front end will run on `http://localhost:4200/`
+Server will run on port 3100. Specified in server.js and in environment.ts files
+
+
+
+
+
+
 
 ## Development server
 
