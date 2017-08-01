@@ -31,8 +31,10 @@ app.use(function(req, res, next) {
 
 
 
-const port = '3100' ;
+
+const port = process.env.PORT || '3100';
 app.set('port', port);
+
 
 // Create HTTP server
 const server = http.createServer(app);
@@ -45,16 +47,9 @@ serverSide(app);
 // For Build: Catch all other routes and return the index file -- BUILDING
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
-  // const index = path.join(__dirname, 'dist', 'index.html');
-  // res.sendFile(index);
 });
 
 
-// ON LOCAL
-//server.listen(port);
-
-
-// ON HEROKU
-server.listen(process.env.PORT  , () => console.log(`API running on localhost:${port}`)); //-- working on LocalHost
+server.listen(port, () => console.log('Running'));
 
 
