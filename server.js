@@ -13,6 +13,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
+
 // Point static path to dist -- For building -- REMOVE
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -26,6 +29,8 @@ app.use(function(req, res, next) {
   next();
 });
 
+
+
 const port = '3100' ;
 app.set('port', port);
 
@@ -38,9 +43,10 @@ serverSide(app);
 
 
 // For Build: Catch all other routes and return the index file -- BUILDING
-app.use('*', function (req, res) {
-  const index = path.join(__dirname, 'dist', 'index.html');
-  res.sendFile(index);
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
+  // const index = path.join(__dirname, 'dist', 'index.html');
+  // res.sendFile(index);
 });
 
 
