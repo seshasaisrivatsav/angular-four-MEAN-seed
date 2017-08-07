@@ -50,6 +50,6 @@ app.get('*', function (req, res) {
 });
 
 
-server.listen(port, () => console.log('Running'));
+server.listen( process.env.PORT , () => console.log('Running'));
 
 
