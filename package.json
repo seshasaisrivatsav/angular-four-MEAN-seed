@@ -2,7 +2,6 @@
   "name": "angular-four-mean-seed",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "app.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,10 +9,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
-  },
-  "engines": {
-    "node": "~6.11.0",
-    "npm": "~5.3.0"
   },
   "private": true,
   "dependencies": {
