@@ -13,6 +13,7 @@ export class TestService {
   }
 
   findAllMessages() {
+    console.log(this.baseUrl);
     return this._http.get(this.baseUrl + '/api/test')
       .map(
         (res: Response) => {

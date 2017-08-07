@@ -327,6 +327,7 @@ var TestService = (function () {
         this.baseUrl = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].baseUrl;
     }
     TestService.prototype.findAllMessages = function () {
+        console.log(this.baseUrl);
         return this._http.get(this.baseUrl + '/api/test')
             .map(function (res) {
             var data = res.json();
