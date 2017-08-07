@@ -21,11 +21,9 @@ export class TestComponent implements OnInit {
     this.findAllMessages();
   }
   findAllMessages() {
-    console.log('here');
     return this._testService.findAllMessages()
       .subscribe(
         (data: any) => {
-          console.log(data);
           this.messages = data;
         }
       );

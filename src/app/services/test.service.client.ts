@@ -13,12 +13,10 @@ export class TestService {
   }
 
   findAllMessages() {
-    console.log('here');
     return this._http.get(this.baseUrl + '/api/test')
       .map(
         (res: Response) => {
           const data = res.json();
-          console.log(data);
           return data;
         }
       );
@@ -36,7 +34,7 @@ export class TestService {
       );
   }
   deleteMessage(messageId) {
-    return this._http.delete(this.baseUrl + '/api/test' + messageId)
+    return this._http.delete(this.baseUrl + '/api/test/' + messageId)
       .map(
         (res: Response) => {
           const data = res.json();
