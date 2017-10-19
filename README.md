@@ -8,9 +8,10 @@ This is a seed MEAN Stack (Angular 4) application. You can clone it for your per
 
 <img src="https://excellentwebworld.com/wp-content/uploads/2017/09/images-2.jpg" height=190px>
 <ol>
-  <li>nodeJs</li>
   <li>MongoDB</li>
   <li>ExpressJS</li>
+    <li>Angular CLI</li>
+  <li>nodeJS</li>
 </ol>  
 
 
