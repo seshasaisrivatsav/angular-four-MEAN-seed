@@ -1,10 +1,29 @@
 # AngularFourMEANSeed
 
-After you clone this repository and run "npm install"
-To start the project
-Open two terminals, One to start the front end, One to start the backend
+This is a seed MEAN Stack (Angular 4) application. You can clone it for your personal projects. 
+
+
+
+<h1>Required Installations on local machine</h1>
+
+<img src="https://excellentwebworld.com/wp-content/uploads/2017/09/images-2.jpg" height=190px>
+<ol>
+  <li>nodeJs</li>
+  <li>MongoDB</li>
+  <li>ExpressJS</li>
+</ol>  
+
+
+<h1> Running the app locally </h1>
+<ol>
+  <li>Make sure you run mongodb locally</li>
+  <li>Run front end</li>
+  <li>Run back end</li>
+</ol>  
 
 ```
+npm install
+mongod
 npm start
 nodemon server.js
 ```
